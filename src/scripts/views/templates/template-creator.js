@@ -12,7 +12,7 @@ const foodRestaurant = (restaurant) => {
     .map(
       (food) => `
     		<li>${food.name}</li>
-    	`
+    	`,
     )
     .join('');
 };
@@ -22,7 +22,7 @@ const drinkRestaurant = (restaurant) => {
     .map(
       (drink) => `
     		<li>${drink.name}</li>
-    	`
+    	`,
     )
     .join('');
 };
@@ -42,7 +42,7 @@ const reviewPelanggan = (restaurant) => {
                 <p>${rev.date}</p>
                 <p id="text__review">${rev.review}</p>
             </div>
-		  `
+		  `,
     )
     .join('');
 };
@@ -118,7 +118,7 @@ const createRestaurantItemTemplate = (restaurant) => `
         <source 
           media="(max-width: 600px)"
           class="lazyload" 
-          srcset="${CONFIG.BASE_IMAGE_URL_MD + restaurant.pictureId}"
+          data-srcset="${CONFIG.BASE_IMAGE_URL_MD + restaurant.pictureId}"
         >
           <img
               class="product-item__thumbnail lazyload"
@@ -174,7 +174,10 @@ const createSnackbarSuccessTemplate = () => `
 
 const emptyData = () => `
   <div class="empty__state">
-    <img data-src="./images/no-favorite.svg" alt="" class="img__no__favorite lazyload" />
+    <img 
+      data-src="./images/no-favorite.svg" alt="Empty Data" 
+      class="img__no__favorite lazyload" 
+    />
     <h3>No Favorites Yet!</h3>
     <p>
       Click the 'love' action button on any detail page to add a
@@ -186,7 +189,11 @@ const emptyData = () => `
 
 const notFoundData = () => `
   <div class="empty__state">
-    <img data-src="./images/not-found.svg" alt="Not Found" class="img__no__favorite lazyload" />
+    <img 
+      data-src="./images/not-found.svg" 
+      alt="Not Found" 
+      class="img__no__favorite lazyload" 
+    />
     <h3>Error!</h3>
     <p>
       The Datas can't load, please <a href="https://github.com/agunwiguna" target="_blank" rel="noreferrer">contact us </a>

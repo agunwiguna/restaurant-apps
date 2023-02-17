@@ -1,0 +1,28 @@
+{
+  "env": {
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": "google",
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "ignorePatterns": ["app.bundle.js", "**/dist/*.js"],
+  "rules": {
+    "linebreak-style": 0,
+    "require-jsdoc": 0,
+    "quotes": "off",
+    "indent": "off",
+    "prefer-promise-reject-errors": "off",
+    "comma-dangle": [2, "always-multiline"],
+    "object-curly-spacing": [2, "always"],
+    "space-before-function-paren": 0,
+    "no-trailing-spaces": 0,
+    "no-tabs": ["error", { "allowIndentationTabs": true }],
+    "new-cap": ["error", { "capIsNew": false }]
+  }
+}
